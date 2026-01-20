@@ -1,16 +1,44 @@
-# React + Vite
+# ⏱️ Countdown Timer (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Problem Statement
 
-Currently, two official plugins are available:
+Build a **Countdown Timer** using React that allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Enter time in **hours, minutes, and seconds**
+- Start the countdown
+- Pause and continue the timer
+- Reset the timer to the initially entered time
+- Clear the timer completely to zero
 
-## React Compiler
+The timer should display the remaining time in `HH:MM:SS` format and stop automatically when it reaches zero.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+<!-- ## Solution Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User input (hours, minutes, seconds) is converted into **total seconds**
+- The countdown runs using `setInterval`
+- **React Hooks** are used for state and side-effect management
+- `useRef` is used to:
+  - Store the interval ID without causing re-renders
+  - Preserve the initial timer value for reset functionality
+- Proper cleanup is implemented to avoid memory leaks
+
+---
+
+## Key Concepts Used
+
+- React Hooks: `useState`, `useEffect`, `useRef`
+- Single source of truth (`timeLeft` in seconds)
+- Functional state updates
+- Side-effect cleanup
+
+---
+
+## Expected Behavior
+
+- Timer should not start if the entered time is `0`
+- Timer updates every second
+- Timer pauses and resumes correctly
+- Reset restores the initial countdown value
+- Clear stops the timer and resets it to zero -->
